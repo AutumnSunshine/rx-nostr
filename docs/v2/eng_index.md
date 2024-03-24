@@ -14,11 +14,11 @@ Using rx-nostr, Nostr app developers can use publish/subscribe as described in [
   - Monitor the status of your WebSocket connections. Apps can use this to build interfaces that notify users of the connection status with different relays.
 - **RelayPool Management**:
   - Manage collections of relays, handling changes in relay configuration, such as adding or removing default relays or changing Read/Write settings, and appropriately reconfigures currently active REQs under the new relay configuration.
-- **Flexible handling of relay-server constraints**
+- **Flexible handling of relay-server constraints**:
   - Queue REQ requests appropriately, to avoid violating concurrent REQ subscription limit for relays published based on [NIP-11](https://github.com/nostr-protocol/nips/blob/master/11.md) .
-- **Handling AUTH requests**
+- **Handling AUTH requests**:
   - Automatically handles AUTH messages based on [NIP-42](https://github.com/nostr-protocol/nips/blob/master/42.md) . When using rx-nostr, all that is needed is to set an option to support NIP-42.
-- **Sign and verify signatures**
+- **Sign and verify signatures**:
   - Automatically sign and verify signatures. The only information an app developer needs to provide when publishing an event is the essential content of the event.
 
 Using rx-nostr, for example, the code to subscribe to kind1 events can be easily implemented as shown below. This code is explained in detail in [Getting Started](./getting-started.md).
